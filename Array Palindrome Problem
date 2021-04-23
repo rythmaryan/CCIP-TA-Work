@@ -1,0 +1,33 @@
+Problem Statement: Priyanka got an array as input and assigned a task to verify that the reversal of array gives the same array or not. If array and its reverse version both are same then print “ Verified” else print “ Not Verified”.
+
+Input format
+Given an array of size ‘n’ as input.
+
+Constraints
+1<= n <= 20
+
+Output format
+Print the ioutput as Verified or Not Verified.
+
+Test Cases: ( 1 2 2 1: Verfied), ( 6 4 7: Not Verified), ( 1 8 5 8 1: Verified), ( 9 5 4 2: Not Verified)
+
+Solution: 
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(){
+    int i,n,low,high,arr[20],swap=0;
+    cin>>n;
+    for(i=0;i<n;i++){
+        cin>>arr[i];  }
+    low=0;high=n-1;
+    while(low<high){
+        if(arr[low]==arr[high]){
+            low++;
+            high--;
+        }else{ swap=1; break;} }
+  if(swap==1)cout<<"Not Verified";
+  else cout<<"Verified";
+    return 0;}
